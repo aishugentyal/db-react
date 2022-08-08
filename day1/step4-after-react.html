@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // JSX : Javascript XML
+           /* 
+           let val = "List Item ";
+           let elm = <ol>
+                        <li>{ val } 1</li>
+                        <li>{ val } 2</li>
+                        <li>{ val } 3</li>
+                        <li>{ val } 4</li>
+                        <li>{ val } 5</li>
+                    </ol> 
+            */
+
+        // Function based component
+        /* let Elm = function(props){
+            return <ol>
+                <li>{ props.args } 1 { props.title } | Created on  {props.creationTime}</li>
+                <li>{ props.args } 2 { props.title } | Created on  {props.creationTime}</li>
+                <li>{ props.args } 3 { props.title } | Created on  {props.creationTime}</li>
+                <li>{ props.args } 4 { props.title } | Created on  {props.creationTime}</li>
+                <li>{ props.args } 5 { props.title } | Created on  {props.creationTime}</li>
+                </ol> ;
+            }; 
+        */
+
+        // Class based component
+           class Elm extends React.Component{
+                render(){
+                    return <ol>
+                                <li>{ this.props.args } 1 { this.props.title } | Created on  {this.props.creationTime}</li>
+                                <li>{ this.props.args } 2 { this.props.title } | Created on  {this.props.creationTime}</li>
+                                <li>{ this.props.args } 3 { this.props.title } | Created on  {this.props.creationTime}</li>
+                                <li>{ this.props.args } 4 { this.props.title } | Created on  {this.props.creationTime}</li>
+                                <li>{ this.props.args } 5 { this.props.title } | Created on  {this.props.creationTime}</li>
+                        </ol>
+                }
+           }
+           ReactDOM
+           .createRoot(document.getElementById("root"))
+           .render(<Elm args="Changed list item" creationTime={ new Date().getSeconds() } title="title comes here"/>);
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
